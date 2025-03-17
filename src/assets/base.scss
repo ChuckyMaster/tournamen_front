@@ -1,0 +1,154 @@
+@use 'sass:color';
+
+
+// 🌸 Palette de couleurs pastel (Violet & Bleu + Extras)
+$primary-light: #D8BFD8;  
+$primary: #D8BFD8;        
+$primary-dark: #9575CD;   
+
+$secondary-light: #9575CD; 
+$secondary: #81D4FA;       
+$secondary-dark: #4FC3F7;  
+
+
+$accent-light: #F8BBD0;  
+$accent: #FFAB91;        
+$accent-dark: #FF8A65;  
+
+$neutral-light: #F5F5F5;  
+$neutral-dark: #BDBDBD;    
+
+//  Fonds et textes
+$background: #FAFAFA;     
+$text-primary: #3E3E3E;    
+$text-secondary: #616161;  
+
+// Variables CSS
+:root {
+  --primary-light: #{$primary-light};
+  --primary: #{$primary};
+  --primary-dark: #{$primary-dark};
+
+  --secondary-light: #{$secondary-light};
+  --secondary: #{$secondary};
+  --secondary-dark: #{$secondary-dark};
+
+  --accent-light: #{$accent-light};
+  --accent: #{$accent};
+  --accent-dark: #{$accent-dark};
+
+  --neutral-light: #{$neutral-light};
+ 
+  --neutral-dark: #{$neutral-dark};
+
+  --background: #{$background};
+  --text-primary: #{$text-primary};
+  --text-secondary: #{$text-secondary};
+}
+
+// 🎨 Couleurs des boutons
+$primary-color: #B39DDB;   // Violet doux
+$secondary-color: #81D4FA; // Bleu pastel
+
+// ✨ Boutons personnalisés
+.btn-primary {
+  background-color: $primary-color !important;
+  color: white !important;
+  border-radius: 25px;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: adjust-color($primary-color, $lightness: -10%) !important;
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary-color !important;
+  color: white !important;
+  border-radius: 25px;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: adjust-color($secondary-color, $lightness: -10%) !important;
+  }
+}
+
+// 🔄 Reset général
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--text-primary);
+  background-color: var(--background);
+}
+
+// 📐 Flex helpers
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.flex-fill {
+  flex: 1 1 auto;
+}
+
+// 📏 Padding helpers
+.p-10 { padding: 10px; }
+.p-20 { padding: 20px; }
+.p-30 { padding: 30px; }
+.px-20 { padding-left: 20px; padding-right: 20px; }
+
+// 📏 Margin helpers
+.m-10 { margin: 10px; }
+.m-20 { margin: 20px; }
+.m-30 { margin: 30px; }
+.mb-10 { margin-bottom: 10px; }
+.mr-10 { margin-right: 10px; }
+.mr-20 { margin-right: 20px; }
